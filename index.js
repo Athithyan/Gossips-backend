@@ -17,8 +17,10 @@ const db = monk(process.env.DB_CONNECT, (function(err, db){
 }));
 const gossips = db.get(process.env.GOSSIPS_DB_NAME);
 
-
-app.get('/gossips',(req,res)=>{
+/**
+ * PATHS
+ */
+app.get('/gossips',(req,res) => {
     console.log('Gossips Entry');
     gossips.find()
            .then(gossips =>{
@@ -26,11 +28,6 @@ app.get('/gossips',(req,res)=>{
            });
     console.log('Gossips Exit');
 });
-
-function isValidGossip(gossip){
-    return gossip.title.toString().trim() !== ''&&
-            gossip.content.toString().trim() !== ''
-}
 
 app.post('/gossips',(req,res) => {
    if(isValidGossip(req.body)){
@@ -51,6 +48,24 @@ app.post('/gossips',(req,res) => {
         });
    }
 });
+
+app.get('/',(req,res)=>{
+    console.log('Hello');
+    res.status(200);
+    res.json({
+        message:'HELLO WORLD'
+     })
+    }
+);
+
+
+/**
+ * Helper Utils.
+ */
+function isValidGossip(gossip){
+    return gossip.title.toString().trim() !== ''&&
+            gossip.content.toString().trim() !== ''
+}
 
 
 /**
