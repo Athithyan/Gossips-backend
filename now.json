@@ -1,0 +1,17 @@
+{
+    "version": 2, 
+    "builds": [
+      {
+        "src": "*.js",
+        "use": "@now/node-server" 
+      }
+    ],
+    "build": {
+        "env":{
+          "DB_CONNECT": "@test_db"
+        }
+    },
+    "routes": [
+        {"src": "/","dest": "/index.js" }
+        ]
+  }

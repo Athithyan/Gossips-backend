@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gossips</title>
+  
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <header>
+          <h1 class="title">Gossips..</h1>
+      </header>
+      <main>
+        <div class="flex">
+          <form class="form">
+              <label for="title">Title</label><br>
+              <input class="u-full-width" id="title" name="title" type="text"><br>
+              <label for="content">Description</label><br>
+              <textarea class="u-full-width" id="content" name="gossip" type="text"></textarea><br>
+              <button class="button-primary">Gossip</button>
+          </form>
+          <div class="loading">
+              <img src="loading.gif" alt="">
+          </div>
+          <div class="gossips">
+
+          </div>
+          </div>
+      </main>
+      <script src="client.js"></script>
+  </body>
+  </html>

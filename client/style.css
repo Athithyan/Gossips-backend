@@ -1,0 +1,27 @@
+.title{
+    text-align: center;
+    position: fixed;
+}
+.form ,.loading {
+    width:50%;
+    margin-top: 100px;
+    position: fixed;
+   
+}
+.form input,.form textarea{
+    width: 70%;
+}
+.loading{
+    text-align: center;
+    margin-top: 150px;
+}
+
+.gossips{
+    width:50%;
+    margin-left: 700px;
+   
+}
+
+.flex{
+    display: flex;
+}

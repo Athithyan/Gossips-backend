@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "deploy": "now -e DB_connect=@test_db"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Athithyan/gossip.git"
+  },
+  "author": "athithyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Athithyan/gossip/issues"
+  },
+  "homepage": "https://github.com/Athithyan/gossip#readme",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "monk": "^7.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
