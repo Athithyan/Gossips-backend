@@ -10,9 +10,11 @@ require('dotenv/config');
 /**
  * Configuration To Connect To Mongo DB.
  */
-const db = monk(process.env.DB_CONNECT, () => {
-    console.log('[INFO] {} CONNECTED', process.env.DB_CONNECT);
-    });
+const db = monk(process.env.DB_CONNECT, (function(err, db){
+    if(err){
+       console.error("[ERROR] DB CONNECTION ISSUE", err.message);
+    }
+}));
 const gossips = db.get(process.env.GOSSIPS_DB_NAME);
 
 

@@ -8,7 +8,8 @@
     ],
     "build": {
         "env":{
-          "DB_CONNECT": "@test_db"
+          "DB_CONNECT": "mongodb+srv://gossip_user:qwerty123@cluster0-3null.gcp.mongodb.net/test?retryWrites=true&w=majority",
+          "GOSSIPS_DB_NAME" : "gossips"
         }
     },
     "routes": [
